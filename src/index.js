@@ -9,6 +9,15 @@ module.exports = function getTimeForEducation(
     knowsProgramming = true,
     config = {family: 4}
     ) {
-      return 0;
-  };
+      {
+        let weeks = 0;
+        let OurLevel = 1300;
+        let timekill = config[focus];
+        if(knowsProgramming) OurLevel-=500;
   
+        
+        for(let i = 0; i < OurLevel; i+=timekill) weeks++; 
+  
+        return weeks;
+  }
+}
